@@ -33,7 +33,7 @@ public class VekDemoWebConfig extends WebMvcConfigurerAdapter {
 	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(new VekDemoInterceptor()).addPathPatterns("/*");
+		registry.addInterceptor(new VekDemoInterceptor()).addPathPatterns("/**");
 //		registry.addInterceptor(new VekDemoInterceptor()).addPathPatterns("***");可设置多个PathPattern 
 		logger.info("------------- VekInterceptorRegister.addInterceptors  ");
 		super.addInterceptors(registry);

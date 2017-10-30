@@ -27,12 +27,29 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- spring-boot starter begin -->
+		<!-- spring-boot web starter begin -->
+		<!-- 默认/tomcat -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- spring-boot starter end -->
+		
+		<!-- Spring Boot 使用 jetty 容器 ，使用除tomcat外的容器，首先排除Tomcat启动器
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency> 
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-jetty</artifactId> 
+		</dependency> -->
+		<!-- spring-boot web starter end -->
 		<!-- data begin -->
 		<!-- mybatis -->
 		<dependency>
