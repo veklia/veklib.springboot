@@ -3,11 +3,17 @@
  */
 package com.veklib.springboot.listener;
 
+import java.util.Iterator;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import org.apache.log4j.Logger;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.MutablePropertySources;
+import org.springframework.core.env.PropertySource;
 
 /**
  * 
@@ -24,7 +30,8 @@ public class VekDemoListenerAnno implements ServletContextListener {
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		logger.info("==================== @VekDemoListenerAnno.contextInitialized");
+		logger.info("======== @VekDemoListenerAnno.contextInitialized");
+		logger.info("===== service is " + sce.getServletContext().getServerInfo());
 	}
 
 	/* (non-Javadoc)
